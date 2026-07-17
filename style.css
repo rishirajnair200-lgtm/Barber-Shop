@@ -355,3 +355,341 @@ nav a:hover{
     transform:translateY(0);
 
   }
+/* =========================
+        GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+    border:2px solid rgba(212,175,55,.15);
+    transition:.4s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    border-color:#d4af37;
+    box-shadow:0 0 25px rgba(212,175,55,.35);
+}
+
+/* =========================
+        REVIEWS
+========================= */
+
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-bottom:60px;
+}
+
+.review{
+    background:#151515;
+    padding:35px;
+    border-radius:20px;
+    border:1px solid rgba(212,175,55,.15);
+    transition:.4s;
+}
+
+.review:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
+    box-shadow:0 0 25px rgba(212,175,55,.3);
+}
+
+.review p{
+    color:#ddd;
+    margin:20px 0;
+    line-height:1.8;
+}
+
+.review h4{
+    color:#d4af37;
+}
+
+/* =========================
+      REVIEW FORM
+========================= */
+
+.review-form{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.review-form h3{
+    margin-bottom:30px;
+    color:#d4af37;
+}
+
+.review-form input,
+.review-form textarea{
+    width:100%;
+    background:#111;
+    color:white;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:16px;
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+.review-form textarea{
+    min-height:160px;
+    resize:none;
+}
+
+.review-form button{
+    padding:15px 40px;
+    border:none;
+    background:#d4af37;
+    color:black;
+    font-weight:bold;
+    border-radius:50px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.review-form button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px #d4af37;
+}
+
+/* =========================
+        CONTACT
+========================= */
+
+#contact{
+    text-align:center;
+}
+
+#contact p{
+    margin:15px 0;
+    color:#ddd;
+    font-size:18px;
+}
+
+iframe{
+    width:100%;
+    height:400px;
+    margin-top:40px;
+    border:none;
+    border-radius:20px;
+}
+
+/* =========================
+       WHATSAPP BUTTON
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    z-index:999;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 30px #25D366;
+}
+
+/* =========================
+          FOOTER
+========================= */
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:30px;
+    color:#999;
+    border-top:1px solid rgba(212,175,55,.15);
+}
+
+footer p{
+    letter-spacing:1px;
+   }
+/* =========================
+      EXTRA LUXURY EFFECTS
+========================= */
+
+.card,
+.review,
+.gallery img,
+.gold-btn,
+.outline-btn,
+.nav-btn{
+    transition:all .35s ease;
+}
+
+header.scrolled{
+    background:#000;
+    box-shadow:0 5px 20px rgba(0,0,0,.6);
+}
+
+::selection{
+    background:#d4af37;
+    color:#000;
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#d4af37;
+    border-radius:20px;
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:#d4af37;
+    box-shadow:0 0 12px rgba(212,175,55,.3);
+}
+
+section{
+    animation:fadeUp .8s ease;
+}
+
+/* =========================
+        RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.hero h1{
+    font-size:3.8rem;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+}
+
+header{
+    padding:18px 5%;
+}
+
+section{
+    padding:80px 5%;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+    padding:15px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.logo{
+    font-size:26px;
+}
+
+.hero{
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:2.8rem;
+}
+
+.hero h3{
+    font-size:1rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.gold-btn,
+.outline-btn{
+    width:220px;
+    text-align:center;
+}
+
+.card{
+    padding:30px;
+}
+
+.gallery img{
+    height:240px;
+}
+
+iframe{
+    height:300px;
+}
+
+.whatsapp{
+    width:58px;
+    height:58px;
+    font-size:28px;
+    right:18px;
+    bottom:18px;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.section-title h2{
+    font-size:2rem;
+}
+
+.review,
+.card{
+    padding:25px;
+}
+
+.nav-btn{
+    padding:10px 20px;
+}
+
+.review-form input,
+.review-form textarea{
+    font-size:15px;
+}
+
+footer{
+    font-size:14px;
+}
+
+       }
